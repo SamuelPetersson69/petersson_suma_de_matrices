@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+// rand de toda la vida para generar una funcion de  0 y 100
+int generarNumeroAleatorio() {
+    return rand() % 101; //esta wea mete numeros aleatorios de 0 a 100 pongo 101 porque se resta 1 y ya 
+}
