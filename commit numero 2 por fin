@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+// rand de toda la vida para generar una funcion de  0 y 100
+int generarNumeroAleatorio() {
+    return rand() % 101; //esta wea mete numeros aleatorios de 0 a 100 pongo 101 porque se resta 1 y ya 
+}
+
+int main() {
+    int f, c; // Variables y para el numero de columnas y filas
+
+    // esto solo solicita las dimenciones de las matrices
+    printf("Ingrese el numero de filas para las matrices: ");
+    scanf("%d", &f);
+
+    printf("Ingrese el numero de columnas para las matrices: ");
+    scanf("%d", &c);
+
+    // estro valida que las dimenciones no sean -3, 7/2
+    if (f <= 0 || c <= 0) {
+        printf("Las dimensiones ingresadas no son validas.\n");
+        return 1; // esto sale del programa 
+    }
+
+    // Declaracion de toda la vida de las matrices A, B y el resultado de la suma (R)
+    int A[f][c], B[f][c], R[f][c];
+
+    srand(time(NULL)); // esto inicia el generador de numeros
+
+  
